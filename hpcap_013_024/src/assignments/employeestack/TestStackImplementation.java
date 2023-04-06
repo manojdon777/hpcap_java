@@ -1,10 +1,27 @@
 package assignments.employeestack;
 
+import java.util.Scanner;
+
 public class TestStackImplementation {
     public static void main(String[] args) {
         Employee e;
         FixedStack fixedStack = new FixedStack();
         GrowableStack growableStack = new GrowableStack();
+        Scanner sc = new Scanner(System.in);
+        boolean condition = true;
+        int choice;
+        while (condition){
+            System.out.println("\t\t\t******** Menu ********");
+            System.out.println("\t\t\t1. Fixed");
+            System.out.println("\t\t\t2. Growable");
+            System.out.print("\tEnter choice : ");
+            choice = sc.nextInt();
+            switch(choice){
+                case 1:
+
+            }
+
+        }
 //        System.out.println(fixedStack.pop());
 //        fixedStack.push(new Employee(101, "AAA", 50000));
 //        fixedStack.push(new Employee(102, "BBB", 80000));
@@ -15,7 +32,6 @@ public class TestStackImplementation {
 //        System.out.println(fixedStack.pop());
 //        System.out.println(fixedStack.pop());
 
-        System.out.println(fixedStack.pop());
         growableStack.push(new Employee(101, "AAA", 51000));
         growableStack.push(new Employee(102, "BBB", 52000));
         growableStack.push(new Employee(103, "CCC", 53000));
@@ -27,7 +43,7 @@ public class TestStackImplementation {
         growableStack.push(new Employee(109, "III", 59000));
         growableStack.push(new Employee(110, "JJJ", 51100));
 //        growableStack.display();
-//        System.out.println(growableStack.pop());
+
 
 
 

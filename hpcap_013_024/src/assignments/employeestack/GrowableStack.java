@@ -6,7 +6,6 @@ public class GrowableStack implements Stack{
 
     @Override
     public void push(Employee e) {
-        System.out.println(emp.length);
         if(counter != emp.length-1){
             counter++;
             emp[counter] = e;
@@ -22,19 +21,21 @@ public class GrowableStack implements Stack{
     }
     @Override
     public Employee pop() {
-        Employee temp = new Employee(0,"",0.0);
+        Employee temp;// = null;
         if(counter == -1){
-            System.out.println("UnderFlow");
+            System.out.print("UnderFlow - ");
+            return null;
         }
         else{
-            temp = emp[counter--];
-            System.out.println("Popped");
+            temp = emp[counter];
+            System.out.print("Popped  ");
+            counter--;
         }
         return temp;
     }
     public void display(){
         if(counter == -1){
-            System.out.println("UnderFlow");
+            System.out.println("Nothing to display");
             return;
         }
         for (int i = 0; i <= counter; i++) {
