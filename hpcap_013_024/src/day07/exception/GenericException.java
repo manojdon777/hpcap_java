@@ -12,9 +12,10 @@ public class GenericException {
             System.out.println(sc.nextInt());
             System.out.println(s.length());
         }catch(InputMismatchException e){
-            System.out.println("InputMismatchException occured");
+            System.out.println("InputMismatchException occurred");
         }catch (Exception e){
-            System.out.println("Exception occured");
+            System.out.println("Exception occurred");
         }
+        System.out.println("End");
     }
 }
