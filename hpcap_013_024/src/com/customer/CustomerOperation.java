@@ -17,7 +17,7 @@ public class CustomerOperation {
                 customers[++top] = customer;
                 System.out.println("Customer added Successfully");
             }else {
-                if(isDuplicateCutomer(customer))
+                if(isDuplicateCustomer(customer))
                     throw new DuplicateCustomer("Customer already exist!!!!");
                 else{
                     customers[++top] = customer;
@@ -29,7 +29,7 @@ public class CustomerOperation {
         }
     }
 
-    private boolean isDuplicateCutomer(Customer customer){
+    private boolean isDuplicateCustomer(Customer customer){
         for(int i=0; i <= top; i++){
             if(customer.getEmail().equals(customers[i].getEmail())){
                 return true;
